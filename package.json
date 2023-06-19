@@ -2,14 +2,19 @@
   "name": "socialnetwork-ts",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --env port=3000"
+  },
   "author": "Ilya Dolgov <prhatecore@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/webpack-dev-server": "4.7.2",
     "html-webpack-plugin": "5.5.0",
     "ts-loader": "9.2.6",
     "typescript": "4.5.5",
     "webpack": "5.69.1",
-    "webpack-cli": "4.9.2"
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.7.4"
   },
   "dependencies": {
     "@types/node": "17.0.21",
