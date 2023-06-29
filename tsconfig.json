@@ -5,7 +5,12 @@
     "module": "ESNext",
     "target": "ES5",
     "jsx": "react-jsx",
+    "allowJs": true,
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
