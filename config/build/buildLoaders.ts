@@ -3,6 +3,32 @@ import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+  const typescriptLoader = {
+    test: /\.tsx?$/,
+    use: "ts-loader",
+    exclude: /node_modules/,
+  };
+
+  const bableLoader = {
+    test: /\.m?(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
+        plugins: [
+          [
+            "i18next-extract",
+            {
+              locales: ["ru", "en"],
+              keyAsDefaultValue: true,
+            },
+          ],
+        ],
+      },
+    },
+  };
+
   const svgLoader = {
     test: /\.svg$/,
     use: ["@svgr/webpack"],
@@ -36,11 +62,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: "ts-loader",
-    exclude: /node_modules/,
-  };
-
-  return [typescriptLoader, svgLoader, fileLoader, cssLoader];
+  return [fileLoader, svgLoader, bableLoader, typescriptLoader, cssLoader];
 }
