@@ -20,13 +20,13 @@ export function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-  ]
-  if(isDev) {
-    plugins.push(new webpack.HotModuleReplacementPlugin())
+  ];
+  if (isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin());
     plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false,
-    }))
+    }));
   }
 
-  return plugins
+  return plugins;
 }
