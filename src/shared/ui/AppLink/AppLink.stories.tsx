@@ -31,7 +31,7 @@ Secondary.args = {
 };
 
 export const Red = Template.bind({});
-Secondary.args = {
+Red.args = {
   children: "Text",
   theme: AppLinkTheme.RED,
 };
