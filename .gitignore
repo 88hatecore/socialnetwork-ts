@@ -2,3 +2,5 @@
 node_modules
 extractedTranslations
 .vscode
+.idea
+/storybook-static
