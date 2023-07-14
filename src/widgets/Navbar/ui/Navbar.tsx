@@ -5,10 +5,8 @@ interface INavbarProps {
   className?: string;
 }
 
-export const Navbar = ({ className }: INavbarProps) => {
-  return (
-    <div className={classNames(styles.Navbar, {}, [className])}>
-      <div className={styles.links}/>
-    </div>
-  );
-};
+export const Navbar = ({ className }: INavbarProps) => (
+  <div className={classNames(styles.Navbar, {}, [className])}>
+    <div className={styles.links} />
+  </div>
+);
