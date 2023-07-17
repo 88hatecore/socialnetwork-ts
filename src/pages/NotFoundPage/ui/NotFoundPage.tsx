@@ -7,7 +7,7 @@ interface INotFoundPageProps {
 }
 
 const NotFoundPage = ({ className }: INotFoundPageProps) => {
-  const { t } = useTranslation("translation");
+  const { t } = useTranslation();
 
   return (
     <div className={classNames(styles.NotFoundPage, {}, [className])}>
