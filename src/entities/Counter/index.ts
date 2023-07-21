@@ -1,5 +1,5 @@
-import { counterReducer } from "entities/Counter/model/slice/counterSlice";
-import { Counter } from "entities/Counter/ui/Counter";
 import type { ICounterSchema } from "entities/Counter/model/types/counterSchema";
+import { counterReducer } from "../Counter/model/slice/counterSlice";
+import { Counter } from "../Counter/ui/Counter";
 
 export { counterReducer, Counter, ICounterSchema };
