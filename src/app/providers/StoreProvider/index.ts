@@ -3,6 +3,7 @@ import { AppDispatch, createReduxStore } from "./config/store";
 import type {
   IReduxStoreWithManager,
   IStateSchema,
+  IThunkConfig,
 } from "./config/StateSchema";
 
 export {
@@ -10,5 +11,6 @@ export {
   createReduxStore,
   AppDispatch,
   IStateSchema,
+  IThunkConfig,
   IReduxStoreWithManager,
 };
