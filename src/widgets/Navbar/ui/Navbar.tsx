@@ -1,7 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
-import { useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LoginModal } from "features/AuthByUsername";
 import { getUserAuthData, userActions } from "../../../entities/User/index";
@@ -11,7 +11,7 @@ interface INavbarProps {
   className?: string;
 }
 
-export const Navbar = ({ className }: INavbarProps) => {
+export const Navbar = memo(({ className }: INavbarProps) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const [isAuthModal, setIsAuthModal] = useState(false);
@@ -57,4 +57,4 @@ export const Navbar = ({ className }: INavbarProps) => {
       )}
     </div>
   );
-};
+});

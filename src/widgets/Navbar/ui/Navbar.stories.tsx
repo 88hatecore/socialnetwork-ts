@@ -28,3 +28,12 @@ AuthNavbar.decorators = [
     user: { authData: {} },
   }),
 ];
+
+export const AuthNavbarDark = Template.bind({});
+AuthNavbarDark.args = {};
+AuthNavbarDark.decorators = [
+  ThemeDecorator(Theme.DARK),
+  StoreDecorator({
+    user: { authData: {} },
+  }),
+];
