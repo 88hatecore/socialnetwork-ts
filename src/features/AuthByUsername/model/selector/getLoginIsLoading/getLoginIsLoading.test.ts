@@ -1,4 +1,3 @@
-import { DeepPartial } from "@reduxjs/toolkit";
 import { IStateSchema } from "app/providers/StoreProvider";
 import { getLoginIsLoading } from "features/AuthByUsername/model/selector/getLoginIsLoading/getLoginIsLoading";
 

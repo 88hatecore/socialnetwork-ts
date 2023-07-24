@@ -13,14 +13,14 @@ type HTMLInputProps = Omit<
   "value" | "onChange"
 >;
 
-interface IInputProps extends HTMLInputProps {
+interface InputProps extends HTMLInputProps {
   className?: string;
   value?: string;
   onChange?: (value: string) => void;
   autofocus?: boolean;
 }
 
-export const Input = memo((props: IInputProps) => {
+export const Input = memo((props: InputProps) => {
   const {
     className,
     type = "text",
@@ -31,7 +31,7 @@ export const Input = memo((props: IInputProps) => {
     ...otherProps
   } = props;
 
-  const ref = useRef<HTMLInputElement>();
+  const ref = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [caretPosition, setCaretPosition] = useState(0);
 

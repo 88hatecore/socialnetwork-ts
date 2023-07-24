@@ -38,12 +38,12 @@ export interface IReduxStoreWithManager extends EnhancedStore<IStateSchema> {
   reducerManager: IReducerManager;
 }
 
-export interface IThunkExtraArg {
+export interface ThunkExtraArg {
   api: AxiosInstance;
-  navigate: (to: To, options?: NavigateOptions) => void;
+  navigate?: (to: To, options?: NavigateOptions) => void;
 }
 
-export interface IThunkConfig<T> {
+export interface ThunkConfig<T> {
   rejectValue: T;
-  extra: IThunkExtraArg;
+  extra: ThunkExtraArg;
 }
