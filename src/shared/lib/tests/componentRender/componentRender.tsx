@@ -12,7 +12,7 @@ export interface IComponentRenderOptions {
 
 export function componentRender(
   component: ReactNode,
-  options: IComponentRenderOptions = {}
+  options: IComponentRenderOptions = {},
 ) {
   const { route = "/", initialState } = options;
 
@@ -21,6 +21,6 @@ export function componentRender(
       <StoreProvider initialState={initialState}>
         <I18nextProvider i18n={i18nForTests}>{component}</I18nextProvider>
       </StoreProvider>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 }

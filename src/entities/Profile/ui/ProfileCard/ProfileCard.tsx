@@ -1,12 +1,12 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import { getProfileData } from "../../../../entities/Profile/modal/selector/getProfileData/getProfileData";
-import { getProfileIsLoading } from "../../../../entities/Profile/modal/selector/getProfileIsLoading/getProfileIsLoading";
-import { getProfileError } from "../../../../entities/Profile/modal/selector/getProfileError/getProfileError";
 import { Text } from "shared/ui/Text/Text";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import { Input } from "shared/ui/Input/Input";
+import { getProfileData } from "../../../../entities/Profile/modal/selector/getProfileData/getProfileData";
+import { getProfileIsLoading } from "../../../../entities/Profile/modal/selector/getProfileIsLoading/getProfileIsLoading";
+import { getProfileError } from "../../../../entities/Profile/modal/selector/getProfileError/getProfileError";
 import styles from "./ProfileCard.module.scss";
 
 interface IProfileCardProps {

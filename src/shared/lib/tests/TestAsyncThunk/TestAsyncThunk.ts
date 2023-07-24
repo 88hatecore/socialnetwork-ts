@@ -18,6 +18,7 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
   actionCreator: ActionCreatorType<Return, Arg, RejectedValue>;
 
   api: jest.MockedFunctionDeep<AxiosStatic>;
+
   navigate: jest.MockedFn<any>;
 
   constructor(actionCreator: ActionCreatorType<Return, Arg, RejectedValue>) {
