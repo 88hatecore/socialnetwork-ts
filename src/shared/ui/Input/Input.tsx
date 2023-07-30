@@ -46,13 +46,8 @@ export const Input = memo((props: InputProps) => {
   }, [autofocus]);
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const numbersRegex = /^[0-9\b]+$/;
-    if (numbersRegex.test(e.target.value)) {
-      onChange?.(e.target.value);
-      setCaretPosition(e.target.value.length);
-    } else {
-      e.target.value = "";
-    }
+    onChange?.(e.target.value);
+    setCaretPosition(e.target.value.length);
   };
 
   const onBlur = () => {
