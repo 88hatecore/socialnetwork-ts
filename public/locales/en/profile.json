@@ -8,5 +8,13 @@
   "Город": "City",
   "Страна": "Country",
   "Юзернейм": "Username",
-  "Валюта": "Currency"
+  "Валюта": "Currency",
+  "Имя и Фамилия обязательны": "First and last name is required",
+  "Юзернейм обязателен": "Username is required",
+  "Некорректный возраст": "Incorrect age",
+  "Некорректный регион": "Incorrect region",
+  "Некорректный город": "Incorrect city",
+  "Некорректная ссылка": "Incorrect link",
+  "Серверная ошибка при сохранении": "Server error on saving",
+  "Данные не указаны": "Data not specified"
 }
