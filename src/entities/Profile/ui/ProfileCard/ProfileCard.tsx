@@ -100,10 +100,23 @@ export const ProfileCard = (props: ProfileCardProps) => {
           readonly={readonly}
         />
         <Input
-          value={data?.age} // Регулярное выражение на проверку ввода чисел!!!
+          value={data?.username}
+          placeholder={t("Юзернейм")}
+          className={styles.input}
+          onChange={onChangeUsername}
+          readonly={readonly}
+        />
+        <Input
+          value={data?.age}
           placeholder={t("Возраст")}
           className={styles.input}
           onChange={onChangeAge}
+          readonly={readonly}
+        />
+        <CountrySelect
+          className={styles.input}
+          value={data?.country}
+          onChange={onChangeCountry}
           readonly={readonly}
         />
         <Input
@@ -113,30 +126,17 @@ export const ProfileCard = (props: ProfileCardProps) => {
           onChange={onChangeCity}
           readonly={readonly}
         />
-        <Input
-          value={data?.username}
-          placeholder={t("Логин")}
-          className={styles.input}
-          onChange={onChangeUsername}
-          readonly={readonly}
-        />
-        <Input
-          value={data?.avatar}
-          placeholder={t("Аватар")}
-          className={styles.input}
-          onChange={onChangeAvatar}
-          readonly={readonly}
-        />
         <CurrencySelect
           className={styles.input}
           value={data?.currency}
           onChange={onChangeCurrency}
           readonly={readonly}
         />
-        <CountrySelect
+        <Input
+          value={data?.avatar}
+          placeholder={t("Ссылка на изображение")}
           className={styles.input}
-          value={data?.country}
-          onChange={onChangeCountry}
+          onChange={onChangeAvatar}
           readonly={readonly}
         />
       </div>

@@ -17,7 +17,11 @@
 
 .avatarWrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: left;
+}
+
+.avatar {
+  border: 2px solid black;
 }
 
 .editing {

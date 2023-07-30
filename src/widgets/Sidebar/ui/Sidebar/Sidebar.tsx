@@ -7,11 +7,11 @@ import { SidebarItemsList } from "../../model/Items";
 import { SidebarItem } from "../SidebarItem/SidebarItem";
 import styles from "./Sidebar.module.scss";
 
-interface ISidebarProps {
+interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar = memo(({ className }: ISidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
   const onToggle = () => {
     setCollapsed((prev) => !prev);
