@@ -1,18 +1,20 @@
-import { Country, Currency } from "shared/const/common";
+import { Currency } from "entities/Currency/modal/types/currency";
+import { Country } from "entities/Country/modal/types/country";
 
-export interface IProfile {
-  first: string;
-  last: string;
-  age: number;
-  currency: Currency;
-  country: Country;
-  city: string;
-  username: string;
-  avatar: string;
+export interface Profile {
+  first?: string;
+  last?: string;
+  age?: number;
+  currency?: Currency;
+  country?: Country;
+  city?: string;
+  username?: string;
+  avatar?: string;
 }
 
 export interface IProfileSchema {
-  data?: IProfile;
+  data?: Profile;
+  form?: Profile;
   isLoading: boolean;
   error?: string;
   readonly: boolean;

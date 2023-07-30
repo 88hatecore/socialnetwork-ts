@@ -1,17 +1,17 @@
-import { IStateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "app/providers/StoreProvider";
 import { getLoginPassword } from "features/AuthByUsername/model/selector/getLoginPassword/getLoginPassword";
 
 describe("getLoginPassword.test", () => {
   test("should return value", () => {
-    const state: DeepPartial<IStateSchema> = {
+    const state: DeepPartial<StateSchema> = {
       loginForm: {
         password: "123123",
       },
     };
-    expect(getLoginPassword(state as IStateSchema)).toEqual("123123");
+    expect(getLoginPassword(state as StateSchema)).toEqual("123123");
   });
   test("should work with empty state", () => {
-    const state: DeepPartial<IStateSchema> = {};
-    expect(getLoginPassword(state as IStateSchema)).toEqual("");
+    const state: DeepPartial<StateSchema> = {};
+    expect(getLoginPassword(state as StateSchema)).toEqual("");
   });
 });

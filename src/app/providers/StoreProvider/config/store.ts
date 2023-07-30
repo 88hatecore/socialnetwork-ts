@@ -10,14 +10,14 @@ import { NavigateOptions } from "react-router/dist/lib/context";
 import { counterReducer } from "../../../../entities/Counter";
 import { userReducer } from "../../../../entities/User";
 import { createReducerManager } from "./reducerManager";
-import { IStateSchema, ThunkExtraArg } from "./StateSchema";
+import { StateSchema, ThunkExtraArg } from "./StateSchema";
 
 export function createReduxStore(
-  initialState?: IStateSchema,
-  asyncReducers?: ReducersMapObject<IStateSchema>,
+  initialState?: StateSchema,
+  asyncReducers?: ReducersMapObject<StateSchema>,
   navigate?: (to: To, options?: NavigateOptions) => void,
 ) {
-  const rootReducer: ReducersMapObject<IStateSchema> = {
+  const rootReducer: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     user: userReducer,
     counter: counterReducer,
@@ -31,7 +31,7 @@ export function createReduxStore(
   };
 
   const store = configureStore({
-    reducer: reducerManager.reduce as Reducer<CombinedState<IStateSchema>>,
+    reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({

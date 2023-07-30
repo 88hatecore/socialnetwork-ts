@@ -11,13 +11,21 @@
   "Переключить": "Toggle",
   "Главная": "Home",
   "О Сайте": "About Site",
+  "Профиль": "Profile",
   "Короткий язык": "En",
   "Войти": "Log in",
   "Выйти": "Log out",
+  "Отменить": "Cancel",
+  "Редактировать": "Edit",
+  "Сохранить": "Save",
   "Прибавить": "increment",
   "Отнять": "decrement",
+  "Укажите страну": "Enter country",
+  "Укажите валюту": "Enter currency",
   "Введите логин": "Enter login",
   "Введите пароль": "Enter password",
   "Форма авторизации": "Authorization form",
-  "Неверный логин или пароль": "Uncorrected username or password"
+  "Неверный логин или пароль": "Uncorrected username or password",
+  "Произошла ошибка при загрузке профиля": "An error occurred while loading a profile",
+  "Попробуйте обновить страницу": "Try refreshing the page"
 }
