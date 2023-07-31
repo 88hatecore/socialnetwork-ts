@@ -29,9 +29,5 @@ export const validateProfileData = (profile?: Profile) => {
     errors.push(ValidateProfileError.INCORRECT_CITY);
   }
 
-  if (!avatar) {
-    errors.push(ValidateProfileError.INCORRECT_AVATAR);
-  }
-
   return errors;
 };

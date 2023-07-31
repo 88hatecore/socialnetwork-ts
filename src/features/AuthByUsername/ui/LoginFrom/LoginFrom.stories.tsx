@@ -27,18 +27,6 @@ Normal.decorators = [
   }),
 ];
 
-export const withError = Template.bind({});
-withError.args = {};
-withError.decorators = [
-  StoreDecorator({
-    loginForm: {
-      username: "123",
-      password: "asd",
-      error: "ERROR",
-    },
-  }),
-];
-
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [
@@ -47,6 +35,18 @@ Dark.decorators = [
     loginForm: {
       username: "123",
       password: "asd",
+    },
+  }),
+];
+
+export const withError = Template.bind({});
+withError.args = {};
+withError.decorators = [
+  StoreDecorator({
+    loginForm: {
+      username: "123",
+      password: "asd",
+      error: "ERROR",
     },
   }),
 ];

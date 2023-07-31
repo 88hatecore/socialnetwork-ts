@@ -100,23 +100,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
           readonly={readonly}
         />
         <Input
-          value={data?.username}
-          placeholder={t("Юзернейм")}
-          className={styles.input}
-          onChange={onChangeUsername}
-          readonly={readonly}
-        />
-        <Input
           value={data?.age}
           placeholder={t("Возраст")}
           className={styles.input}
           onChange={onChangeAge}
-          readonly={readonly}
-        />
-        <CountrySelect
-          className={styles.input}
-          value={data?.country}
-          onChange={onChangeCountry}
           readonly={readonly}
         />
         <Input
@@ -126,10 +113,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
           onChange={onChangeCity}
           readonly={readonly}
         />
-        <CurrencySelect
+        <Input
+          value={data?.username}
+          placeholder={t("Юзернейм")}
           className={styles.input}
-          value={data?.currency}
-          onChange={onChangeCurrency}
+          onChange={onChangeUsername}
           readonly={readonly}
         />
         <Input
@@ -137,6 +125,18 @@ export const ProfileCard = (props: ProfileCardProps) => {
           placeholder={t("Ссылка на изображение")}
           className={styles.input}
           onChange={onChangeAvatar}
+          readonly={readonly}
+        />
+        <CurrencySelect
+          className={styles.input}
+          value={data?.currency}
+          onChange={onChangeCurrency}
+          readonly={readonly}
+        />
+        <CountrySelect
+          className={styles.input}
+          value={data?.country}
+          onChange={onChangeCountry}
           readonly={readonly}
         />
       </div>
