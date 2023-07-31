@@ -39,6 +39,18 @@ Dark.decorators = [
   }),
 ];
 
+export const Black = Template.bind({});
+Black.args = {};
+Black.decorators = [
+  ThemeDecorator(Theme.BLACK),
+  StoreDecorator({
+    loginForm: {
+      username: "123",
+      password: "asd",
+    },
+  }),
+];
+
 export const withError = Template.bind({});
 withError.args = {};
 withError.decorators = [
@@ -64,6 +76,19 @@ withErrorDark.decorators = [
   }),
 ];
 
+export const withErrorBlack = Template.bind({});
+withErrorBlack.args = {};
+withErrorBlack.decorators = [
+  ThemeDecorator(Theme.BLACK),
+  StoreDecorator({
+    loginForm: {
+      username: "123",
+      password: "asd",
+      error: "ERROR",
+    },
+  }),
+];
+
 export const Loading = Template.bind({});
 Loading.args = {};
 Loading.decorators = [
@@ -78,6 +103,17 @@ export const LoadingDark = Template.bind({});
 LoadingDark.args = {};
 LoadingDark.decorators = [
   ThemeDecorator(Theme.DARK),
+  StoreDecorator({
+    loginForm: {
+      isLoading: true,
+    },
+  }),
+];
+
+export const LoadingBlack = Template.bind({});
+LoadingBlack.args = {};
+LoadingBlack.decorators = [
+  ThemeDecorator(Theme.BLACK),
   StoreDecorator({
     loginForm: {
       isLoading: true,

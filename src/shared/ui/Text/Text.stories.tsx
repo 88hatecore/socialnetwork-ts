@@ -26,6 +26,13 @@ NormalDark.args = {
 };
 NormalDark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const NormalBlack = Template.bind({});
+NormalBlack.args = {
+  title: "Test title",
+  text: "Test description",
+};
+NormalBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
 export const Error = Template.bind({});
 Error.args = {
   title: "Test title",
@@ -41,6 +48,14 @@ ErrorDark.args = {
 };
 ErrorDark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const ErrorBlack = Template.bind({});
+ErrorBlack.args = {
+  title: "Test title",
+  text: "Test description",
+  theme: TextTheme.ERROR,
+};
+ErrorBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
 export const OnlyTitle = Template.bind({});
 OnlyTitle.args = {
   title: "Test title",
@@ -51,6 +66,12 @@ OnlyTitleDark.args = {
   title: "Test title",
 };
 OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OnlyTitleBlack = Template.bind({});
+OnlyTitleBlack.args = {
+  title: "Test title",
+};
+OnlyTitleBlack.decorators = [ThemeDecorator(Theme.BLACK)];
 
 export const OnlyTitleError = Template.bind({});
 OnlyTitleError.args = {
@@ -65,6 +86,13 @@ OnlyTitleErrorDark.args = {
 };
 OnlyTitleErrorDark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const OnlyTitleErrorBlack = Template.bind({});
+OnlyTitleErrorBlack.args = {
+  title: "Test title",
+  theme: TextTheme.ERROR,
+};
+OnlyTitleErrorBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
 export const OnlyText = Template.bind({});
 OnlyText.args = {
   text: "Test description",
@@ -75,6 +103,12 @@ OnlyTextDark.args = {
   text: "Test description",
 };
 OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OnlyTextBlack = Template.bind({});
+OnlyTextBlack.args = {
+  text: "Test description",
+};
+OnlyTextBlack.decorators = [ThemeDecorator(Theme.BLACK)];
 
 export const OnlyTextError = Template.bind({});
 OnlyTextError.args = {
@@ -88,3 +122,10 @@ OnlyTextErrorDark.args = {
   theme: TextTheme.ERROR,
 };
 OnlyTextErrorDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OnlyTextErrorBlack = Template.bind({});
+OnlyTextErrorBlack.args = {
+  text: "Test description",
+  theme: TextTheme.ERROR,
+};
+OnlyTextErrorBlack.decorators = [ThemeDecorator(Theme.BLACK)];

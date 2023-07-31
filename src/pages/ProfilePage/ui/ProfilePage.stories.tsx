@@ -58,3 +58,23 @@ Dark.decorators = [
     },
   }),
 ];
+
+export const Black = Template.bind({});
+Black.args = {};
+Black.decorators = [
+  ThemeDecorator(Theme.BLACK),
+  StoreDecorator({
+    profile: {
+      form: {
+        first: "Ilya",
+        last: "Dolgov",
+        username: "admin",
+        age: 25,
+        country: Country.Russia,
+        city: "Moscow",
+        currency: Currency.RUB,
+        avatar,
+      },
+    },
+  }),
+];

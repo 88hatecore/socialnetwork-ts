@@ -47,6 +47,21 @@ Dark.args = {
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const Black = Template.bind({});
+Black.args = {
+  data: {
+    first: "Ilya",
+    last: "Dolgov",
+    username: "admin",
+    age: 25,
+    country: Country.Russia,
+    city: "Moscow",
+    currency: Currency.RUB,
+    avatar,
+  },
+};
+Black.decorators = [ThemeDecorator(Theme.BLACK)];
+
 export const withError = Template.bind({});
 withError.args = {
   error: "true",
@@ -58,6 +73,12 @@ withErrorDark.args = {
 };
 withErrorDark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const withErrorBlack = Template.bind({});
+withErrorBlack.args = {
+  error: "true",
+};
+withErrorBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
 export const Loading = Template.bind({});
 Loading.args = {
   isLoading: true,
@@ -68,3 +89,9 @@ LoadingDark.args = {
   isLoading: true,
 };
 LoadingDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const LoadingBlack = Template.bind({});
+LoadingBlack.args = {
+  isLoading: true,
+};
+LoadingBlack.decorators = [ThemeDecorator(Theme.BLACK)];

@@ -25,3 +25,10 @@ Dark.args = {
   value: "123123",
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Black = Template.bind({});
+Black.args = {
+  placeholder: "Type text",
+  value: "123123",
+};
+Black.decorators = [ThemeDecorator(Theme.BLACK)];

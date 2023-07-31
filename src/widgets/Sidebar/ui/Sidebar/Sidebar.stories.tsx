@@ -33,6 +33,15 @@ Dark.decorators = [
   }),
 ];
 
+export const Black = Template.bind({});
+Black.args = {};
+Black.decorators = [
+  ThemeDecorator(Theme.BLACK),
+  StoreDecorator({
+    user: { authData: {} },
+  }),
+];
+
 export const NoAuth = Template.bind({});
 NoAuth.args = {};
 NoAuth.decorators = [
@@ -45,6 +54,15 @@ export const NoAuthDark = Template.bind({});
 NoAuthDark.args = {};
 NoAuthDark.decorators = [
   ThemeDecorator(Theme.DARK),
+  StoreDecorator({
+    user: {},
+  }),
+];
+
+export const NoAuthBlack = Template.bind({});
+NoAuthBlack.args = {};
+NoAuthBlack.decorators = [
+  ThemeDecorator(Theme.BLACK),
   StoreDecorator({
     user: {},
   }),
