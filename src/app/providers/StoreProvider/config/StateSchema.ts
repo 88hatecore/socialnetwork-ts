@@ -9,6 +9,7 @@ import { ICounterSchema } from "entities/Counter";
 import { IUserSchema } from "entities/User";
 import { ILoginSchema } from "features/AuthByUsername";
 import { IProfileSchema } from "entities/Profile";
+import { ArticleDetailsSchema } from "entities/Article";
 import { AxiosInstance } from "axios";
 import { To } from "@remix-run/router";
 import { NavigateOptions } from "react-router/dist/lib/context";
@@ -20,6 +21,7 @@ export interface StateSchema {
   // Асинхронные редюсеры
   loginForm?: ILoginSchema;
   profile?: IProfileSchema;
+  articleDetails?: ArticleDetailsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
