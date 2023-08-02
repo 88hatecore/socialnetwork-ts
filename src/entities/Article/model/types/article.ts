@@ -16,20 +16,20 @@ export interface ArticleCodeBlock extends ArticleBlockBase {
 
 export interface ArticleImageBlock extends ArticleBlockBase {
   type: ArticleBlockType.IMAGE;
-  scr: string;
+  src: string;
   title: string;
 }
 
 export interface ArticleTextBlock extends ArticleBlockBase {
   type: ArticleBlockType.TEXT;
-  title?: string;
   paragraphs: string[];
+  title?: string;
 }
 
 export type ArticleBlock =
   | ArticleCodeBlock
   | ArticleImageBlock
-  | ArticleBlockBase;
+  | ArticleTextBlock;
 
 export enum ArticleType {
   IT = "IT",
