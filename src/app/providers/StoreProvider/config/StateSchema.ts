@@ -5,23 +5,25 @@ import {
   Reducer,
   ReducersMapObject,
 } from "@reduxjs/toolkit";
-import { ICounterSchema } from "entities/Counter";
-import { IUserSchema } from "entities/User";
-import { ILoginSchema } from "features/AuthByUsername";
-import { IProfileSchema } from "entities/Profile";
+import { CounterSchema } from "entities/Counter";
+import { UserSchema } from "entities/User";
+import { LoginSchema } from "features/AuthByUsername";
+import { ProfileSchema } from "entities/Profile";
 import { ArticleDetailsSchema } from "entities/Article";
+import { ArticleDetailsCommentSchema } from "pages/ArticleDetailsPage";
 import { AxiosInstance } from "axios";
 import { To } from "@remix-run/router";
 import { NavigateOptions } from "react-router/dist/lib/context";
 
 export interface StateSchema {
-  counter: ICounterSchema;
-  user: IUserSchema;
+  counter: CounterSchema;
+  user: UserSchema;
 
   // Асинхронные редюсеры
-  loginForm?: ILoginSchema;
-  profile?: IProfileSchema;
+  loginForm?: LoginSchema;
+  profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
+  articleDetailsComments?: ArticleDetailsCommentSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
