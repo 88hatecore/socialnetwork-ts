@@ -102,6 +102,36 @@
       "text": "some comment 2",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "id": "4",
+      "text": "hello world",
+      "articleId": "1",
+      "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "un2-d8a"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123321",
+      "id": "_CR9p0Y"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "привет мир",
+      "id": "WFitm-a"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "хехехе",
+      "id": "iOV1SdS"
     }
   ],
   "users": [
@@ -120,14 +150,28 @@
       "avatar": "https://avatars.githubusercontent.com/u/125557963?v=4"
     }
   ],
-  "profile": {
-    "first": "Ilya",
-    "last": "Dolgov",
-    "age": 25,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Ivanovo",
-    "username": "admin",
-    "avatar": "https://avatars.githubusercontent.com/u/120119796?v=4"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Ilya",
+      "last": "Dolgov",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Ivanovo",
+      "username": "admin",
+      "avatar": "https://avatars.githubusercontent.com/u/120119796?v=4"
+    },
+    {
+      "id": "2",
+      "first": "Dmitry",
+      "last": "Krupnov",
+      "age": 26,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Ivanovo",
+      "username": "red ocean",
+      "avatar": "https://avatars.githubusercontent.com/u/125557963?v=4"
+    }
+  ]
 }

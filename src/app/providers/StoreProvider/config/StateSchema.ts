@@ -11,6 +11,7 @@ import { LoginSchema } from "features/AuthByUsername";
 import { ProfileSchema } from "entities/Profile";
 import { ArticleDetailsSchema } from "entities/Article";
 import { ArticleDetailsCommentSchema } from "pages/ArticleDetailsPage";
+import { AddCommentFormSchema } from "features/addCommentForm";
 import { AxiosInstance } from "axios";
 import { To } from "@remix-run/router";
 import { NavigateOptions } from "react-router/dist/lib/context";
@@ -24,6 +25,7 @@ export interface StateSchema {
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
   articleDetailsComments?: ArticleDetailsCommentSchema;
+  addCommentForm?: AddCommentFormSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

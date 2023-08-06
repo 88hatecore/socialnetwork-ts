@@ -17,6 +17,7 @@
   "Отменить": "Cancel",
   "Редактировать": "Edit",
   "Сохранить": "Save",
+  "Отправить": "Send",
   "Прибавить": "increment",
   "Отнять": "decrement",
   "Укажите страну": "Enter country",
@@ -24,6 +25,7 @@
   "Введите логин": "Enter login",
   "Введите пароль": "Enter password",
   "Форма авторизации": "Authorization form",
+  "Введите текст комментария": "Enter comment text",
   "Неверный логин или пароль": "Uncorrected username or password",
   "Произошла ошибка при загрузке профиля": "An error occurred while loading a profile",
   "Попробуйте обновить страницу": "Try refreshing the page"
