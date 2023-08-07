@@ -3,12 +3,12 @@ import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { memo } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useSelector } from "react-redux";
+import { SidebarItemType } from "widgets/Sidebar/model/types/sidebar";
 import { getUserAuthData } from "../../../../entities/User";
-import { ISidebarItemType } from "../../model/Items";
 import styles from "./SidebarItem.module.scss";
 
 interface ISidebarItemProps {
-  item: ISidebarItemType;
+  item: SidebarItemType;
   collapsed: boolean;
 }
 
