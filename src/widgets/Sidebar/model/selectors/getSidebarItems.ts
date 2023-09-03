@@ -1,5 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { getUserAuthData } from "entities/User";
+import { getUserAuthData } from "../../../../entities/User";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import MainIcon from "shared/assets/icons/main-20-20.svg";
 import AboutIcon from "shared/assets/icons/about-20-20.svg";
@@ -34,7 +34,7 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
         Icon: ArticleIcon,
         text: "Статьи",
         authOnly: true,
-      },
+      }
     );
   }
 
