@@ -72,12 +72,6 @@
     object-fit: contain;
   }
 
-  .data {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
   .infoWrapper {
     display: flex;
     align-items: center;
@@ -107,5 +101,3 @@
     text-overflow: ellipsis;
   }
 }
-
-
