@@ -1,4 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "app/providers/ThemeProvider";
 import { ArticleList } from "./ArticleList";
 import { Article, ArticleView } from "../../model/types/article";
 
@@ -96,6 +98,22 @@ isLoadingList.args = {
   view: ArticleView.LIST,
 };
 
+export const isLoadingListDark = Template.bind({});
+isLoadingListDark.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.LIST,
+};
+isLoadingListDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const isLoadingListBlack = Template.bind({});
+isLoadingListBlack.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.LIST,
+};
+isLoadingListBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
 export const isLoadingPlate = Template.bind({});
 isLoadingPlate.args = {
   isLoading: true,
@@ -103,8 +121,24 @@ isLoadingPlate.args = {
   view: ArticleView.PLATE,
 };
 
-export const smallPlate = Template.bind({});
-smallPlate.args = {
+export const isLoadingPlateDark = Template.bind({});
+isLoadingPlateDark.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.PLATE,
+};
+isLoadingPlateDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const isLoadingPlateBlack = Template.bind({});
+isLoadingPlateBlack.args = {
+  isLoading: true,
+  articles: [],
+  view: ArticleView.PLATE,
+};
+isLoadingPlateBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
+export const Plate = Template.bind({});
+Plate.args = {
   articles: new Array(9).fill(0).map((item, index) => ({
     ...article,
     id: String(index),
@@ -113,8 +147,30 @@ smallPlate.args = {
   view: ArticleView.PLATE,
 };
 
-export const bigList = Template.bind({});
-bigList.args = {
+export const PlateDark = Template.bind({});
+PlateDark.args = {
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
+  isLoading: false,
+  view: ArticleView.PLATE,
+};
+PlateDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const PlateBlack = Template.bind({});
+PlateBlack.args = {
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
+  isLoading: false,
+  view: ArticleView.PLATE,
+};
+PlateBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
+export const List = Template.bind({});
+List.args = {
   articles: new Array(9).fill(0).map((item, index) => ({
     ...article,
     id: String(index),
@@ -122,3 +178,25 @@ bigList.args = {
   isLoading: false,
   view: ArticleView.LIST,
 };
+
+export const ListDark = Template.bind({});
+ListDark.args = {
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
+  isLoading: false,
+  view: ArticleView.LIST,
+};
+ListDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ListBlack = Template.bind({});
+ListBlack.args = {
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
+  isLoading: false,
+  view: ArticleView.LIST,
+};
+ListBlack.decorators = [ThemeDecorator(Theme.BLACK)];

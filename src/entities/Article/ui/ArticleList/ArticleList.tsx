@@ -13,20 +13,20 @@ interface ArticleListProps {
   view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => {
-  return new Array(view === ArticleView.PLATE ? 9 : 3)
-    .fill(0)
-    .map((item, index) => (
-      <ArticleListItemSkeleton
-        className={styles.card}
-        key={index}
-        view={view}
-      />
-    ));
-};
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.PLATE ? 9 : 3)
+  .fill(0)
+  .map((item, index) => (
+    <ArticleListItemSkeleton
+      className={styles.card}
+      key={index}
+      view={view}
+    />
+  ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
-  const { className, articles, view = ArticleView.PLATE, isLoading } = props;
+  const {
+    className, articles, view = ArticleView.PLATE, isLoading,
+  } = props;
   const { t } = useTranslation();
 
   if (isLoading) {

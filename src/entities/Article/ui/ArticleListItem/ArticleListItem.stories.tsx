@@ -1,4 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "app/providers/ThemeProvider";
 import { ArticleListItem } from "./ArticleListItem";
 import { Article, ArticleView } from "../../model/types/article";
 
@@ -95,8 +97,36 @@ Plate.args = {
   article,
 };
 
-export const LIST = Template.bind({});
-LIST.args = {
+export const PlateDark = Template.bind({});
+PlateDark.args = {
+  view: ArticleView.PLATE,
+  article,
+};
+PlateDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const PlateBlack = Template.bind({});
+PlateBlack.args = {
+  view: ArticleView.PLATE,
+  article,
+};
+PlateBlack.decorators = [ThemeDecorator(Theme.BLACK)];
+
+export const List = Template.bind({});
+List.args = {
   view: ArticleView.LIST,
   article,
 };
+
+export const ListDark = Template.bind({});
+ListDark.args = {
+  view: ArticleView.LIST,
+  article,
+};
+ListDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ListBlack = Template.bind({});
+ListBlack.args = {
+  view: ArticleView.LIST,
+  article,
+};
+ListBlack.decorators = [ThemeDecorator(Theme.BLACK)];

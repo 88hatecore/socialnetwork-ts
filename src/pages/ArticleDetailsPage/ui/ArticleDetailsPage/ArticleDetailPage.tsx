@@ -9,9 +9,11 @@ import {
   ReducersList,
 } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
-import { fetchCommentsByArticleId } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { AddCommentForm } from "features/addCommentForm";
+import { Button, ThemeButton } from "shared/ui/Button/Button";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { fetchCommentsByArticleId } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { addCommentForArticle } from "../../model/services/addCommentForArticle/addCommentForArticle";
 import { ArticleDetails } from "../../../../entities/Article";
 import { CommentList } from "../../../../entities/Comment";
@@ -21,8 +23,6 @@ import {
 } from "../../model/slices/articleDetailsCommentsSlice";
 import { getArticleCommentsIsLoading } from "../../model/selectors/getArticleCommentsIsLoading/getArticleCommentsIsLoading";
 import styles from "./ArticleDetailPage.module.scss";
-import { Button, ThemeButton } from "shared/ui/Button/Button";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
 
 interface ArticleDetailPageProps {
   className?: string;
@@ -45,7 +45,7 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
     (text: string) => {
       dispatch(addCommentForArticle(text));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const onBackToList = useCallback(() => {
